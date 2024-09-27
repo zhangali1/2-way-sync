@@ -1,0 +1,10 @@
+function onEdit() {
+  var s = SpreadsheetApp.getActiveSheet();
+  if( s.getName() == "Sheet14" ) { //checks that we're on the correct sheet
+  var r = s.getActiveCell();
+  if( r.getColumn() == 4 ) { //checks the column
+  var nextCell = r.offset(0, 1);
+  nextCell.setValue(new Date());
+  }
+  }
+ }
